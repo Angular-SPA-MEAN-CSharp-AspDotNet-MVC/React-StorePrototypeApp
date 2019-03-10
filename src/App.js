@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import Navbar from "./components/navbar";
 import Counters from "./components/counters";
 import NavBar from "./components/navbar";
-//import "./App.css";
+import Posts from "./components/Posts";
+import "./App.css";
 
 class App extends Component {
   state = {
@@ -50,6 +51,7 @@ class App extends Component {
             onReset={this.handleReset}
             onIncrement={this.handleIncrement}
           />
+          <Posts className="container" />
         </main>
       </React.Fragment>
     );
