@@ -1,16 +1,18 @@
 import React, { Component } from "react";
 
 class Posts extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      post: []
+    };
+  }
   componentWillMount() {
     console.log(123);
     fetch("https://jsonplaceholder.typicode.com/posts")
       .then(res => res.json())
       .then(data => this.setState({ post: data }));
   }
-
-  state = {
-    post: []
-  };
 
   render() {
     const postItems = this.state.post.map(post => (
@@ -19,12 +21,7 @@ class Posts extends Component {
         <p>{post.body}</p>
       </div>
     ));
-    return (
-      <div>
-        <h1>Redux Project Area Below:</h1>
-        {postItems}
-      </div>
-    );
+    return <div>{postItems}</div>;
   }
 }
 

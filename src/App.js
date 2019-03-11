@@ -2,8 +2,14 @@ import React, { Component } from "react";
 import Navbar from "./components/navbar";
 import Counters from "./components/counters";
 import NavBar from "./components/navbar";
-import Posts from "./components/Posts";
+import Posts from "./components/Posts.jsx";
+import PostForm from "./components/Postform.jsx";
+import { Provider } from "react-redux";
+import { createStore, applyMiddleware } from "redux";
+
 import "./App.css";
+
+const store = createStore(() => [], {}, applyMiddleware());
 
 class App extends Component {
   state = {
@@ -51,7 +57,12 @@ class App extends Component {
             onReset={this.handleReset}
             onIncrement={this.handleIncrement}
           />
-          <Posts className="container" />
+          <Provider store={store}>
+            <h1>Redux Project Area Below:</h1>
+            <PostForm />
+            <hr />
+            <Posts />
+          </Provider>
         </main>
       </React.Fragment>
     );
