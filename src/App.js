@@ -5,11 +5,12 @@ import NavBar from "./components/navbar";
 import Posts from "./components/Posts.jsx";
 import PostForm from "./components/Postform.jsx";
 import { Provider } from "react-redux";
-import { createStore, applyMiddleware } from "redux";
+//import { createStore, applyMiddleware } from "redux";
+import store from "./store";
 
 import "./App.css";
 
-const store = createStore(() => [], {}, applyMiddleware());
+//const store = createStore(() => [], {}, applyMiddleware());
 
 class App extends Component {
   state = {
