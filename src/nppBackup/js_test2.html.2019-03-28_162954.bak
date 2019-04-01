@@ -1,0 +1,33 @@
+
+
+<body>
+	<script>
+
+	document.addEventListener('DOMContentLoaded',  function appendChildren(decorateDivFunction) {
+	  var allDivs = document.getElementsByTagName("div");
+	  debugger
+	  
+	  function decorateDivFunction(newDiv){
+		debugger;
+	  } 
+		
+	  for (var i = 0; i < allDivs.length; i++) {
+		var newDiv = document.createElement("div");
+		decorateDivFunction(newDiv);
+		allDivs[i].appendChild(newDiv);
+		break;
+	  }
+	}, false);
+	
+
+
+	</script>
+
+	<div id="a">
+	  <div id="b">
+			b
+	  </div>
+		a
+	</div>
+
+</body>

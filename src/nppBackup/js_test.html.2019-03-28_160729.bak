@@ -1,0 +1,38 @@
+
+
+
+
+<body>
+<script>
+
+document.addEventListener('DOMContentLoaded',  function registerHandlers() {
+  var as = document.getElementsByTagName('a');
+  for (var i = 0; i < as.length; i++) {
+    as[i].onclick = function() {
+	  //debugger;
+      //alert(i
+	  var as = document.getElementsByTagName('a');
+	  for (var i = 0; i < as.length; i++) {
+		if(as[i] === this) {
+			debugger;
+			alert(i);
+			return false;
+		}
+	  }
+      return false;
+    }
+  }
+  
+
+}, false);
+
+
+
+</script>
+  In my life, I used the following web search engines:<br/>
+  <div>
+    <a href="https://www.yahoo.com">Yahoo!</a><br/>
+	  <a href="http://www.altavista.com">AltaVista</a><br/>
+	  <a href="https://www.google.com">Google</a><br/>
+  </div>
+</body>
